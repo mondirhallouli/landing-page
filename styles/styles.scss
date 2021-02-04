@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+$regular: 400;
+$bold: 600;
+$head-font: Poppins;
+$body-font: Open Sans;
+
+// General
+body {
+    padding: 4.8125rem 0rem;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Open Sans, Arial, sans-serif;
+    font-weight: $regular;
+    background-image: url('/images/bg-mobile.svg'), linear-gradient(0deg, $violet, $violet);
+    background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+// header
+#header {
+    width: 80%;
+    margin: 0 auto 7.5rem;
+
+    img#logo {
+        width: 12.5rem;
+        height: auto;
+    }
+}
+
+// main
+#main {
+    text-align: center;
+    color: white;
+    margin-bottom: 8rem;
+
+    // hero
+    #hero-img {
+        width: 37rem;
+        height: auto;
+        margin-bottom: 8.875rem;
+        padding: 0;
+    }
+
+    // main text
+    #main-text {
+        width: 37.1875rem;
+        margin: 0 auto;
+
+        #main-title {
+            font-family: $head-font;
+            font-size: 2.8rem;
+            font-weight: $bold;
+            margin-top: 0;
+        }
+
+        #main-subtitle {
+            font-size: 1.95rem;
+            line-height: 1.5;
+            margin-bottom: 3.125rem;
+        }
+
+        // cta
+        #cta {
+            width: 25rem;
+            margin: 0 auto;
+            padding: 1.375rem 0;
+            background: white;
+            border: none;
+            border-radius: 2rem;
+            color: $violet;
+            font-family: $head-font;
+            font-size: 1.5rem;
+            box-shadow: 0px 5px 15px -5px rgb(0, 0, 0);
+            transition: all 200ms ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $soft-magenta;
+                color: white;
+            }
+        }
+    }
+}
+
+// footer
+footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+    & a.social {
+        font-size: 1.5rem;
+        color: white;
+        display: block;
+        width: 3.4375rem;
+        height: 3.4375rem;
+        margin-right: 1rem;
+        border: 1px solid white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            color: $soft-magenta;
+            border-color: $soft-magenta;
+        }
+    }
+}
+
+@media (min-width: 62rem) { // 992px
+    body {
+        padding-top: 4.0625rem;
+        padding-bottom: 2.5rem;
+        background-image: url('/images/bg-desktop.svg'), linear-gradient(0deg, $violet, $violet);
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    #header {
+        width: 78.75rem;
+        margin: 0 auto 6.25rem;
+    }
+
+    #main {
+        width: 78.75rem;
+        margin: 0 auto 1.625rem;
+        display: grid;
+        grid-template-columns: 43rem 32rem;
+        grid-column-gap: 3.75rem;
+        grid-template-rows: 30.9375rem;
+
+        & #hero {
+            grid-column: 1 / 2;
+            & #hero-img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        & #main-text {
+            grid-column: 2 / 3;
+            width: 100%;
+            text-align: left;
+            #main-title {
+                font-size: 2.625rem;
+                margin-bottom: 2rem;
+            }
+
+            #main-subtitle {
+                font-size: 1.125rem;
+                line-height: 1.55;
+                margin-bottom: 1.625rem;
+            }
+
+            #cta {
+                font-size: 1.125rem;
+                width: 12.5rem;
+                padding: 1rem 0;
+            }
+        }
+    }
+
+    footer {
+        justify-content: flex-end;
+        padding-right: 5rem;
+
+        & a.social {
+            width: 2.625rem;
+            height: 2.625rem;
+            font-size: 1.5rem;
+        }
+    }
+}

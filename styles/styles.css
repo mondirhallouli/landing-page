@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+body {
+  padding: 4.8125rem 0rem;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Open Sans, Arial, sans-serif;
+  font-weight: 400;
+  background-image: url("/images/bg-mobile.svg"), -webkit-gradient(linear, left bottom, left top, from(#674baf), to(#674baf));
+  background-image: url("/images/bg-mobile.svg"), linear-gradient(0deg, #674baf, #674baf);
+  background-size: contain;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+#header {
+  width: 80%;
+  margin: 0 auto 7.5rem;
+}
+
+#header img#logo {
+  width: 12.5rem;
+  height: auto;
+}
+
+#main {
+  text-align: center;
+  color: white;
+  margin-bottom: 8rem;
+}
+
+#main #hero-img {
+  width: 37rem;
+  height: auto;
+  margin-bottom: 8.875rem;
+  padding: 0;
+}
+
+#main #main-text {
+  width: 37.1875rem;
+  margin: 0 auto;
+}
+
+#main #main-text #main-title {
+  font-family: Poppins;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+#main #main-text #main-subtitle {
+  font-size: 1.95rem;
+  line-height: 1.5;
+  margin-bottom: 3.125rem;
+}
+
+#main #main-text #cta {
+  width: 25rem;
+  margin: 0 auto;
+  padding: 1.375rem 0;
+  background: white;
+  border: none;
+  border-radius: 2rem;
+  color: #674baf;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  -webkit-box-shadow: 0px 5px 15px -5px black;
+          box-shadow: 0px 5px 15px -5px black;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+#main #main-text #cta:hover {
+  background-color: #e882e8;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer a.social {
+  font-size: 1.5rem;
+  color: white;
+  display: block;
+  width: 3.4375rem;
+  height: 3.4375rem;
+  margin-right: 1rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+footer a.social:hover {
+  color: #e882e8;
+  border-color: #e882e8;
+}
+
+@media (min-width: 62rem) {
+  body {
+    padding-top: 4.0625rem;
+    padding-bottom: 2.5rem;
+    background-image: url("/images/bg-desktop.svg"), -webkit-gradient(linear, left bottom, left top, from(#674baf), to(#674baf));
+    background-image: url("/images/bg-desktop.svg"), linear-gradient(0deg, #674baf, #674baf);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  #header {
+    width: 78.75rem;
+    margin: 0 auto 6.25rem;
+  }
+  #main {
+    width: 78.75rem;
+    margin: 0 auto 1.625rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 43rem 32rem;
+        grid-template-columns: 43rem 32rem;
+    grid-column-gap: 3.75rem;
+    -ms-grid-rows: 30.9375rem;
+        grid-template-rows: 30.9375rem;
+  }
+  #main #hero {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  #main #hero #hero-img {
+    width: 100%;
+    height: auto;
+  }
+  #main #main-text {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    width: 100%;
+    text-align: left;
+  }
+  #main #main-text #main-title {
+    font-size: 2.625rem;
+    margin-bottom: 2rem;
+  }
+  #main #main-text #main-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.55;
+    margin-bottom: 1.625rem;
+  }
+  #main #main-text #cta {
+    font-size: 1.125rem;
+    width: 12.5rem;
+    padding: 1rem 0;
+  }
+  footer {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 5rem;
+  }
+  footer a.social {
+    width: 2.625rem;
+    height: 2.625rem;
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
